@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#nav-bar {
+    border: 1px solid black;
+    height: 50px;
+    width: 100% ;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.nav-links {
+    width: 130px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 0.8em;
+    margin: 0 100px 0 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image-intro {
+    margin: 40px;
+    border: 1px solid black;
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#text-box {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 1.3em;
+    width: 400px;
+    margin-right: 90px;
+}
+
+#image-box {
+    position: relative;
+    border: 1px solid black;
+    height: 360px;
+    width: 660px;
+}
+
+img {
+    object-fit: cover   ;
+}
+
+#info {
+    margin: 40px;
+    border: 1px solid black;
+    height: fit-content;
+    padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    margin: 15px 0;
+}
