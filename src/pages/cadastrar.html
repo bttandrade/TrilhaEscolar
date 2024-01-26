@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link rel="stylesheet" href="../styles/cadastro.css">
+    <title>Cadastro</title>
 </head>
 <body>
-    
+    <form id="form" action="">
+        <div class="dados">
+            <div><label for="">Nome</label></div>
+            <input type="text" name="name">
+        </div>
+        
+        <div class="dados">
+            <div><label for="">Email</label></div>
+            <input type="email" name="email" placeholder="seuemail@email.com">
+        </div>
+
+        <div class="dados">
+            <div><label for="">Senha</label></div>
+            <input type="password" name="password" placeholder="Senha">
+        </div>
+
+        <div class="btn">
+            <button type="button">Cadastrar</button>
+        </div>
+
+        <div class="btn">
+            <button type="button">Voltar</button>
+        </div>
+    </form>
 </body>
 </html>
