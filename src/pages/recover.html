@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/recover.css">
+    <title>Recuperar senha</title>
+</head>
+<body>
+    <form id="form" action="">
+        <div class="dados">
+            <div><label for="">Email</label></div>
+            <input type="email" id="email" name="email" placeholder="seu@email.com">
+            <div class="error" id="email-required-error">Email necessário</div>
+            <div class="error" id="email-invalid-error">Email inválido</div>
+        </div>
+
+        <div class="btn">
+            <button type="button" id="recover">Recuperar Senha</button>
+        </div>  
+
+        <div class="btn">
+            <button type="button" onclick="location.href='login.html'">Voltar</button>
+        </div>
+    </form>
+    <script src="../scripts/recover.js"></script>
+</body>
+</html>

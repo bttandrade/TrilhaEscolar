@@ -9,13 +9,13 @@
 <body>
     <form id="form" action="">
         <div class="dados">
-            <div><label for="">Nome</label></div>
-            <input type="text" name="name">
+            <div><label for="">Usuario</label></div>
+            <input type="text" name="user">
         </div>
         
         <div class="dados">
             <div><label for="">Email</label></div>
-            <input type="email" name="email" placeholder="seuemail@email.com">
+            <input type="email" id="email" name="email" placeholder="seu@email.com">
         </div>
 
         <div class="dados">
@@ -24,11 +24,11 @@
         </div>
 
         <div class="btn">
-            <button type="button">Cadastrar</button>
-        </div>
+            <button id="register-btn" type="button" disabled="true">Cadastrar</button>
+        </div>  
 
         <div class="btn">
-            <button type="button">Voltar</button>
+            <button type="button" onclick="location.href='/./index.html'">Voltar</button>
         </div>
     </form>
 </body>

@@ -30,3 +30,8 @@ body {
     text-align: center;
     padding: 10px;
 }
+
+.error {
+    color: red;
+    display: none;
+}
