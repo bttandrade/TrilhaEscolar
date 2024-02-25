@@ -17,7 +17,7 @@ function validateFields() {
     toggleEmailErrors();
     togglePasswordErrors();
     if (toggleEmailErrors() && togglePasswordErrors()) {
-        alert('funciona');
+        login();
     }
 }
 
@@ -36,7 +36,6 @@ function toggleEmailErrors() {
 }
 
 function togglePasswordErrors() {
-    // const password = form.password().value;
     if (!isPasswordValid()) {
         form.passwordInvalid().style.display = 'block';
     } else {
@@ -55,4 +54,24 @@ function isPasswordValid() {
 
 function validateEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
+}
+
+function login() {
+    showLoading();
+    firebase.auth().signInWithEmailAndPassword(
+        form.email().value, form.password().value
+    ).then(response => {
+        hideLoading();
+        window.location.href = "game.html";
+    }).catch(error => {
+        hideLoading();
+        alert(getErrorMessage(error));
+    });
+}
+
+function getErrorMessage(error) {
+    if(error.code == 'auth/invalid-credential') {
+        return "Usuário ou senha incorreto"
+    } 
+    return error.message;
 }

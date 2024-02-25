@@ -14,7 +14,7 @@ form.recover().addEventListener('click', () => {
 function validateFields() {
     toggleEmailErrors();
     if (toggleEmailErrors()) {
-        alert('funciona');
+        recoverPassword();
     }
 }
 
@@ -38,4 +38,15 @@ function isEmailValid() {
 
 function validateEmail(email) {
     return /\S+@\S+\.\S+/.test(email);
+}
+
+function recoverPassword() {
+    showLoading();
+    firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
+        hideLoading();
+        alert('Email enviado com sucesso');
+    }).catch(error => {
+        hideLoading();
+        alert(error);
+    });
 }
